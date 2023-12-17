@@ -1905,6 +1905,9 @@ textarea.form-input::-webkit-resizer { display: none; }
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 20px;
+      max-width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
       background-color: white;
       border: 1px solid #ccc;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1915,13 +1918,15 @@ textarea.form-input::-webkit-resizer { display: none; }
     .popup img {
       max-width: 100%;
       height: auto;
-	    border: 02px solid black;
-	    border-radius: 5px;
+      margin-bottom: 20px;
+	    border:02px solid black;
+	    border-radius:9px;
     }
 
     .popup button {
-      display: block;
-      margin-top: 10px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
       padding: 5px 10px;
       background-color: #007bff;
       color: white;
@@ -3117,7 +3122,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 	    // for blog section 
-	     document.addEventListener('DOMContentLoaded', function () {
+	      document.addEventListener('DOMContentLoaded', function () {
       // Get all the blog post links
       var blogPostLinks = document.querySelectorAll('.blog-post-item a');
 
@@ -3164,7 +3169,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
             };
 
             resolve('<img src="' + contentMap[url].image + '" alt="' + contentMap[url].title + '" loading="lazy" />' +
-                    '<h3 class="h3">' + contentMap[url].title + '</h3>' +
+                    '<h3 class="h3" style="color: black;">' + contentMap[url].title + '</h3>' +
                     '<p>' + contentMap[url].text + '</p>');
           }, 1000);
         });
@@ -3192,7 +3197,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
         popup.appendChild(closeButton);
       }
     });
-
 </script>
 
     <!--

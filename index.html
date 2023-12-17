@@ -1899,6 +1899,36 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+	.popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      text-align: center;
+    }
+
+    .popup img {
+      max-width: 100%;
+      height: auto;
+	    border: 02px solid black;
+	    border-radius: 5px;
+    }
+
+    .popup button {
+      display: block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
 </style>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2818,193 +2848,61 @@ textarea.form-input::-webkit-resizer { display: none; }
       -->
 
         <article class="blog" data-page="blog">
-          <header>
-            <h2 class="h2 article-title">Blog</h2>
-          </header>
+    <header>
+      <h2 class="h2 article-title">Blog</h2>
+    </header>
 
-          <section class="blog-posts">
-            <ul class="blog-posts-list">
-              <li class="blog-post-item">
-                <a href="./testing.html">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-1.jpg"
-                      alt="Design conferences in 2022"
-                      loading="lazy"
-                    />
-                  </figure>
+    <section class="blog-posts">
+      <ul class="blog-posts-list">
+        <li class="blog-post-item">
+          <a href="#" data-post-url="./testing.html">
+            <figure class="blog-banner-box">
+              <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy" />
+            </figure>
 
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Design</p>
+                <span class="dot"></span>
+                <time datetime="2022-02-23">Feb 23, 2022</time>
+              </div>
 
-                      <span class="dot"></span>
+              <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
 
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
+              <p class="blog-text">
+                Created this blog for design conference in 2022.
+              </p>
+            </div>
+          </a>
+        </li>
 
-                    <h3 class="h3 blog-item-title">
-                      Design conferences in 2022
-                    </h3>
+        <!-- Add similar structure for other blog posts -->
+        <li class="blog-post-item">
+          <a href="#" data-post-url="./blog2.html">
+            <figure class="blog-banner-box">
+              <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy" />
+            </figure>
 
-                    <p class="blog-text">
-                      Created this blog for design conference in 2022.
-                    </p>
-                  </div>
-                </a>
-              </li>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Design</p>
+                <span class="dot"></span>
+                <time datetime="2022-02-23">Feb 23, 2022</time>
+              </div>
 
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-2.jpg"
-                      alt="Best fonts every designer"
-                      loading="lazy"
-                    />
-                  </figure>
+              <h3 class="h3 blog-item-title">Best fonts every designer</h3>
 
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
+              <p class="blog-text">
+                Blog created for developers and designers to give the best fonts for their projects.
+              </p>
+            </div>
+          </a>
+        </li>
 
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Best fonts every designer
-                    </h3>
-
-                    <p class="blog-text">
-                      Blog created for developers and designer to give best
-                      fonts for their projects.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-3.jpg"
-                      alt="Design digest #80"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                    <p class="blog-text">
-                      This blog for designers to improve their creativity.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-4.jpg"
-                      alt="UI interactions of the week"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      UI interactions of the week
-                    </h3>
-
-                    <p class="blog-text">
-                      This blog about best ui interactions developed in the
-                      week.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-5.jpg"
-                      alt="The forgotten art of spacing"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      The forgotten art of spacing
-                    </h3>
-
-                    <p class="blog-text">
-                      Blog is for creators The importence of spacing in design
-                      proffesion.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-6.jpg"
-                      alt="Design digest #79"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                    <p class="blog-text">
-                      This blog for designers to improve their creativity.
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article>
+        <!-- Add a similar structure for other blog posts -->
+      </ul>
+    </section>
+  </article>
 
         <!--
         - #CONTACT
@@ -3217,6 +3115,83 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+
+	    // for blog section 
+	     document.addEventListener('DOMContentLoaded', function () {
+      // Get all the blog post links
+      var blogPostLinks = document.querySelectorAll('.blog-post-item a');
+
+      // Add click event listener to each link
+      blogPostLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          // Prevent the default behavior of the link (preventing navigation)
+          event.preventDefault();
+
+          // Get the URL of the clicked blog post
+          var blogPostUrl = this.getAttribute('data-post-url');
+
+          // Fetch the content of the blog post (you can use AJAX or fetch API)
+          // For simplicity, I'm using a placeholder function to simulate fetching content
+          fetchBlogPostContent(blogPostUrl)
+            .then(function (content) {
+              // Display the blog post content in a popup
+              displayPopup(content);
+            })
+            .catch(function (error) {
+              console.error('Error fetching blog post content:', error);
+            });
+        });
+      });
+
+      // Placeholder function to simulate fetching blog post content
+      function fetchBlogPostContent(url) {
+        // You should replace this with your actual content fetching logic
+        return new Promise(function (resolve) {
+          // Simulating a delay for fetching content
+          setTimeout(function () {
+            var contentMap = {
+              './testing.html': {
+                image: 'https://i.ytimg.com/vi/2JdJvbIurfg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUVhsGesJ-eOHapf5AyK4DKxWyyA',
+                title: 'Design conferences in 2022',
+                text: 'Created this blog for design conference in 2022.'
+              },
+              './blog2.html': {
+                image: 'https://i.ytimg.com/vi/2JdJvbIurfg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUVhsGesJ-eOHapf5AyK4DKxWyyA',
+                title: 'Best fonts every designer',
+                text: 'Blog created for developers and designers to give the best fonts for their projects.'
+              },
+              // Add similar entries for other blog posts
+            };
+
+            resolve('<img src="' + contentMap[url].image + '" alt="' + contentMap[url].title + '" loading="lazy" />' +
+                    '<h3 class="h3">' + contentMap[url].title + '</h3>' +
+                    '<p>' + contentMap[url].text + '</p>');
+          }, 1000);
+        });
+      }
+
+      // Function to display the popup with blog post content
+      function displayPopup(content) {
+        // Create a popup element
+        var popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.innerHTML = content;
+
+        // Add the popup to the document body
+        document.body.appendChild(popup);
+
+        // Add a close button to the popup
+        var closeButton = document.createElement('button');
+        closeButton.textContent = 'Close';
+        closeButton.addEventListener('click', function () {
+          // Remove the popup when the close button is clicked
+          document.body.removeChild(popup);
+        });
+
+        // Add the close button to the popup
+        popup.appendChild(closeButton);
+      }
+    });
 
 </script>
 
